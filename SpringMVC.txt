@@ -36,13 +36,22 @@ Lombok  사용하기
 Windows
  - 코드 변수 자동 선언  (Ctrl+Alt+v)
  - 서버 재시작 : Ctrl+F5
- - Refactor This block : Ctrl+Alt+Shift+T
+ - Refactor This block : Ctrl+Alt+Shift+T   // inline 합치기
  - Getter Setter 추가 : Alt+Insert
  - 테스트 코드 작성 : Ctrl+Shift+T
  - Static import : 커서 위치 -> Alt+Enter   (Assert에 대하여 한정적 사용)
+ - 최근 파일 목록 : Ctrl+E
+ - import 정리 : Ctrl + Alt + O
+ - implement Class 선택 : Ctrl + Alt + B
 
 Spring Stream을 String으로 변환
 String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
 
 Junit TEST
 @AfterEach
+
+
+/WEB-INF
+ - 직접 아닌 컨트롤러 통해서만 호출 되길 원할 경우 위치
+
+공통처리 : 프론트 컨트롤러(Front Controller) 
