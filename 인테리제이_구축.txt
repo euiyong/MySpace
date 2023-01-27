@@ -1,0 +1,76 @@
+메이븐 프로젝트 import
+
+[IntelliJ - Maven Build 하기]
+https://itstart-190126.tistory.com/241
+view > Tool Window > Maven Project
+clean, compile, install
+
+[파일 인코딩 UTF-8 설정]
+https://www.lesstif.com/java/intellij-file-console-encoding-121012310.html
+Settings  → Editor  → File Encodings
+
+[pom.xml]
+maven-eclipse-plugin 플러그인 삭제
+(ID관리서버) didms -> DidManagerServer
+
+
+[톰캣연동]
+https://goddaehee.tistory.com/247
+Run > Edit Configurations > Tomcat Local 추가
+Deployment : exploded(expanded)
+
+
+톰캣 로그 한글 깨짐 해결
+https://www.lesstif.com/java/intellij-file-console-encoding-121012310.html
+-Xms256m -Xmx256m
+
+
+Tomcat Hot Swap(deploy)
+https://nickjoit.tistory.com/132
+https://mkyong.com/intellij/intellij-idea-auto-reload-a-web-application-hot-deploy/
+1. Select exploded WAR
+ Go Run –>> Edit Configurations –>> “Deployment” tab, clicks + icon –>> select an “exploded artifact”
+2. Update classes and resources
+ On ‘Update’ action -> Update classes and resources
+ On frame deactivation -> Update classes and resources [필수]
+* Settings > Build > Compiler > Build Project automatically 체크
+
+
+[이클립스 연계]
+인텔리제이 단축키 이클립스와 동일하게 변경방법
+https://wakestand.tistory.com/622
+Settings > Keymap
+
+* 이클립스 프로젝트로  EXPORT
+File > Export > Export to Eclipse 
+
+
+[SVN연동]
+https://gallery-k.tistory.com/326
+1. SVN Tool 다운받기
+2. Intellij 에 SVN Setting 해주기
+
+
+1. Check out Project
+New > New project from version Controll
+New > New Project from exist source
+SVN에 폴더 프로젝트 폴더 만들고 import 
+
+
+
+
+
+
+
+
+
+
+Intellij IDEA Community Edition에서 Tomcat 사용하기
+https://velog.io/@youjung/Intellij-IDEA-Community-Edition%EC%97%90%EC%84%9C-Tomcat-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
+Plugins에 들어가서 Smart Tomcat 설치
+
+
+
+
+D:/IntelliJ/ETRI/DidManageServer/src/main/webapp
+/DidManageServer
