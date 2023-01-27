@@ -1,0 +1,48 @@
+Web Servlet - Spring MVC
+Web Reactive - Spring WebFlux
+ . 비동기 논블로킹
+ . 쓰레드 갯수를 CPU core 갯수로 맞춰서 context switching 비용 최소화
+ . 함수형 스타일 개발 - 동시처리 코드 / 서블릿 사용 X
+
+
+[Java View Templet]
+JSP : 속도 느림, 기능 부족 (스프링부트에서 권장하지 않음)
+프리마커, 벨로시티 : 속도 문제 해결, 다양한 기능
+타임리프(Thymeleaf)
+ . 내추럴 템플릿: HTML 모양을 유지하면서 뷰 템플릿 적용 기능
+ . 스프링  MVC와 강력한 기능 통합
+ . 성능은 프리마커, 벨로시티 가 빠름
+
+
+
+[IntelliJ] Cause: invalid source release: 11 에러 - 자버 버전 변경하기
+https://charliecharlie.tistory.com/315
+
+
+Project Settings
+ - Build > Build Tools > Gradle 에서 Build and run using / Run tests using 모두 IntelliJ IDEA 선택
+
+
+Lombok  사용하기
+ - Plugin에 'Lombok' 설치
+ - Settings > Build > Compiler > annotation processors
+  . Enable annotation processing
+ 
+인텔리제이
+  Ctrl + O : Select Methods to Override/implement
+  sout, soutm, soutv, soutp : Sytem.out
+
+
+Windows
+ - 코드 변수 자동 선언  (Ctrl+Alt+v)
+ - 서버 재시작 : Ctrl+F5
+ - Refactor This block : Ctrl+Alt+Shift+T
+ - Getter Setter 추가 : Alt+Insert
+ - 테스트 코드 작성 : Ctrl+Shift+T
+ - Static import : 커서 위치 -> Alt+Enter   (Assert에 대하여 한정적 사용)
+
+Spring Stream을 String으로 변환
+String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
+
+Junit TEST
+@AfterEach
