@@ -43,6 +43,8 @@ Windows
  - 최근 파일 목록 : Ctrl+E
  - import 정리 : Ctrl + Alt + O
  - implement Class 선택 : Ctrl + Alt + B
+ - Shift + F6 : 클래스/파일명 수정
+ - F2 : 에러 코드로 커서 이동
 
 Spring Stream을 String으로 변환
 String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
