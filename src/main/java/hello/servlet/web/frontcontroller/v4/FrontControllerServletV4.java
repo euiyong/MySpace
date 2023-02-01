@@ -34,15 +34,13 @@ public class FrontControllerServletV4 extends HttpServlet {
         }
 
         Map<String, String> paramMap = createParamMap(req);
+
+//        Map<String, String> paramMap = createParamMap(req);
         Map<String, Object> model = new HashMap<>();
 
         String viewName = controller.process(paramMap, model);
         MyView view = viewResolver(viewName);
         view.render(model, req, resp);
-    }
-
-    private static MyView viewResolver(String viewName) {
-        return new MyView("/WEB-INF/views/" + viewName + ".jsp");
     }
 
     private static Map<String, String> createParamMap(HttpServletRequest req) {
@@ -51,4 +49,10 @@ public class FrontControllerServletV4 extends HttpServlet {
                 .forEachRemaining(paramName -> paramMap.put(paramName, req.getParameter(paramName)));
         return paramMap;
     }
+
+    private static MyView viewResolver(String viewName) {
+        return new MyView("/WEB-INF/views/" + viewName + ".jsp");
+    }
+
+
 }
