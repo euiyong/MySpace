@@ -1,6 +1,6 @@
 package hello.servlet.web.frontcontroller.v3;
 
-import hello.servlet.web.frontcontroller.ModelView;
+import hello.servlet.web.frontcontroller.ModelAndView;
 import hello.servlet.web.frontcontroller.MyView;
 import hello.servlet.web.frontcontroller.v3.controller.MemberFormControllerV3;
 import hello.servlet.web.frontcontroller.v3.controller.MemberListControllerV3;
@@ -17,7 +17,7 @@ import java.util.Map;
 
 @WebServlet(name = "frontControllerServletV3", urlPatterns = "/front-controller/v3/*")
 public class FrontControllerServletV3 extends HttpServlet {
-    private Map<String, ControllerV3> controllerMap = new HashMap<>();
+    private final Map<String, ControllerV3> controllerMap = new HashMap<>();
 
     public FrontControllerServletV3() {
         controllerMap.put("/front-controller/v3/members/new-form", new MemberFormControllerV3());
@@ -36,7 +36,7 @@ public class FrontControllerServletV3 extends HttpServlet {
 
         //paramMap
         Map<String, String> paramMap = createParamMap(req);
-        ModelView mv = controller.process(paramMap);
+        ModelAndView mv = controller.process(paramMap);
 
         String viewName = mv.getViewName();//논리이름 new-form
         MyView view = viewResolver(viewName);
